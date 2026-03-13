@@ -3,44 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta description="WDD 131 - Dynamic Web Fundamentals - Ethan Bray - Home Page">
-    <title>WDD 131 - Dynamic Web Fundamentals - Ethan Bray</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Ethan Bray - Home Page: A landing page for web development course assignments featuring personal info and resources.">
+    <meta name="author" content="Ethan Bray">
+    <title>WDD 131 – Dynamic Web Fundamentals – Ethan Bray</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles/base.css">
     <script src="scripts/getdates.js" defer></script>
-
 </head>
 <body>
     <header>
-        <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
         <nav>
             <ul>
-            <li><a href="https://www.linkedin.com/in/ethan-bray-876397272/">LinkedIn</a></li>
-            <li><a href="https://byupw.instructure.com/.">Canvas</a></li>
-            <li><a href="https://www.churchofjesuschrist.org/study/scriptures/ot/isa/35?lang=eng&id=p3#p3">Scripture</a></li>
-            <li><a href="#">Final Project</a></li>
-        </ul>
-    </nav>
+                <li><a href="https://www.linkedin.com/in/ethan-bray-876397272/">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/ot/isa/35?lang=eng&id=p3#p3">Scripture</a></li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
     </header>
+
     <main>
         <h1>Ethan D. Bray</h1>
         <div class="cards-container">
             <section class="card about-me">
                 <h3>About Me</h3>
                 <div class="about-me-content">
-        <p>
-            My name is Ethan Bray. I was born in South Africa and have recently moved to the States in Texas. I am 24 years old. I like to be outdoors playing sports and hiking as well as staying indoors with a good book or video game. Something interesting that I can do is move my adams apple up and down at will.
-            I am looking forward to meeting you all and learning with you.
-        </p>
-        <img src="images/Profile.jpg" alt="Ethan Bray Profile picture" class="Profile-img">
-    </div>
+                    <p>
+                        My name is Ethan Bray. I was born in South Africa and have recently moved to Fort Worth, Texas. I am 24 years old. I love being outdoors playing sports and hiking, but I also enjoy staying indoors with a good book or a video game. A fun fact about me: I can move my Adam's apple up and down at will!
+                    </p>
+                    <img src="images/Profile.jpg" alt="Ethan Bray Profile Picture" class="profile-img">
+                </div>
+                
+                <div class="location-container">
+                    <div class="location-text">
+                        <h4>Centurion, South Africa</h4>
+                        <p>
+                            South Africa is located at the southern tip of Africa. It is known for its diverse ecosystems, 
+                            vibrant culture, and being the home of the "Big Five" safari animals. Centurion is a 
+                            thriving area located between Pretoria and Johannesburg.
+                        </p>
+                    </div>
+                    <figure class="flag-figure">
+                        <img src="images/South_African_Flag.jpg" alt="Official Flag of South Africa" class="flag-img">
+                        <figcaption>Official Flag of South Africa</figcaption>
+                    </figure>
+                </div>
             </section>
+
             <section class="card web-dev">
-                <h3>Web Dev Reasources</h3>
+                <h3>Web Dev Resources</h3>
+                <ul>
+                    <li><a href="https://dev.to/">Dev.to Community</a></li>
+                    <li><a href="https://www.smashingmagazine.com/">Smashing Magazine</a></li>
+                    <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
+                    <li><a href="https://www.w3schools.com/">W3 Schools</a></li>
+                    <li><a href="https://www.udemy.com/">Udemy</a></li>
+                    <li><a href="https://picsum.photos/">Lorem Picsum</a></li>
+                </ul>
             </section>
         </div>
     </main>
+
     <footer>
-        <p><span id="currentyear"></span> Ethan Bray - Texas</p>
+        <p>&copy;<span id="currentyear"></span> 🌸 Ethan Bray 🌸 Texas</p>
         <p id="lastModified"></p>
     </footer>
 </body>

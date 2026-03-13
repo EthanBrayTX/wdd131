@@ -1,73 +1,68 @@
-/* ==========================
-   Base CSS with Sticky Footer and Side-by-Side Cards
-   ========================== */
-
-/* Reset defaults */
+/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Full height layout for sticky footer */
-html, body {
-    height: 100%;
+body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    color: #333;
     background-color: #f9f9f9;
+    color: #333;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
-/* ==========================
-   Header
-   ========================== */
+/* Header & Navigation */
 header {
-    background-color: #00539f;
-    color: #fff;
-    padding: 1rem;
+    background-color: #1b4965;
+    color: white;
+    padding: 1rem 0;
     text-align: center;
 }
 
-header #course-title {
-    display: block;
-    font-size: 1.5rem;
+#course-title {
+    display: block; /* Required by instructions */
+    font-size: 1.6rem;
     font-weight: bold;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
 }
 
-header nav ul {
+nav {
+    background-color: #333;
+}
+
+nav ul {
+    display: flex; /* Flex required */
     list-style: none;
-    display: flex;
-    padding: 0;
-    margin: 0;
+    justify-content: center;
 }
 
-header nav ul li {
+nav ul li {
     flex: 1;
-    text-align: center;
+    max-width: 150px;
 }
 
-header nav ul li a {
+nav ul li a {
     display: block;
-    color: #fff;
+    color: white;
     text-decoration: none;
-    padding: 0.75rem 0;
-    transition: background 0.3s, color 0.3s;
+    padding: 0.8rem;
+    text-align: center;
+    transition: 0.3s;
 }
 
-header nav ul li a:hover {
-    background-color: #fff;
-    color: #00539f;
+nav ul li a:hover {
+    background-color: #eee;
+    color: #1b4965;
 }
 
-/* ==========================
-   Main Content
-   ========================== */
+/* Main Content Layout */
 main {
     flex: 1;
-    max-width: 960px;
+    max-width: 1000px;
     margin: 2rem auto;
     padding: 0 1rem;
 }
@@ -75,114 +70,116 @@ main {
 h1 {
     text-align: center;
     margin-bottom: 2rem;
+    color: #1b4965;
 }
 
-/* Cards container: About Me 2/3 + Web Dev 1/3 */
 .cards-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr; /* About Me = 2/3, Web Dev = 1/3 */
+    display: grid; /* Grid required */
+    grid-template-columns: 2fr 1fr; /* 2/3 and 1/3 split */
     gap: 1.5rem;
 }
 
-/* Card styling */
+/* Card Styling */
 .card {
+    background: white;
     border: 1px solid #ddd;
-    padding: 1rem;
-    background-color: #fff;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-/* H3 headings inside cards - now spans full width naturally */
 .card h3 {
-    background-color: #00539f;
-    color: #fff;
-    padding: 0.5rem;
-    border-radius: 4px;
-    margin-bottom: 1rem;
+    background-color: #1b4965;
+    color: white;
+    padding: 0.6rem;
     text-align: center;
-    width: 100%;
 }
 
-/* ==========================
-   About Me Card layout
-   ========================== */
-
-/* The card itself is no longer the flex container */
-.about-me {
-    display: block;
-}
-
-/* New container for the side-by-side content */
 .about-me-content {
     display: flex;
-    flex-direction: row; /* text left, image right */
-    gap: 1.5rem;
+    padding: 1.5rem;
+    gap: 1.2rem;
     align-items: flex-start;
 }
 
-.about-me-content p {
-    width: 60%; /* text takes 60% */
-    line-height: 1.5;
-}
-
-.about-me-content img.Profile-img {
-    width: 40%; /* image takes 40% */
+.profile-img {
+    width: 150px;
     height: auto;
-    border-radius: 6px;
+    border-radius: 4px;
 }
 
-/* Web Dev card text */
-.web-dev p {
-    padding: 0.5rem 0;
+/* Flag and Location Section */
+.location-container {
+    display: flex;
+    padding: 1.5rem;
+    gap: 1rem;
+    border-top: 1px solid #eee;
+    align-items: center;
 }
 
-/* ==========================
-   Footer
-   ========================== */
+.location-text {
+    flex: 2;
+}
+
+.flag-figure {
+    flex: 1;
+    text-align: center;
+}
+
+.flag-img {
+    width: 100%;
+    max-width: 160px;
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 0.75rem;
+    margin-top: 0.4rem;
+}
+
+/* Web Dev List */
+.web-dev ul {
+    padding: 1.5rem;
+    list-style-position: inside;
+}
+
+.web-dev li {
+    margin-bottom: 0.7rem;
+}
+
+.web-dev a {
+    color: #1b4965;
+    text-decoration: none;
+}
+
+.web-dev a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
 footer {
-    background-color: #222;
+    background-color: #1b4965;
     color: #eee;
     text-align: center;
     padding: 1.5rem;
-    margin-top: auto; /* Ensures footer stays at bottom */
+    margin-top: auto;
 }
 
-footer p {
-    margin: 0.5rem 0;
+#lastModified {
+    color: #ffeb3b; /* Highlights the modified date */
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
 }
 
-footer span {
-    font-weight: bold;
-}
-
-/* ==========================
-   Responsive adjustments
-   ========================== */
+/* Mobile Responsive */
 @media (max-width: 800px) {
-    /* Stack cards vertically */
     .cards-container {
         grid-template-columns: 1fr;
     }
-
-    /* Stack the About Me content vertically */
-    .about-me-content {
+    .about-me-content, .location-container {
         flex-direction: column;
-    }
-
-    .about-me-content img.Profile-img,
-    .about-me-content p {
-        width: 100%;
-    }
-
-    header nav ul {
-        flex-direction: column;
-        gap: 1rem;
-    }
-}
-
-@media (max-width: 400px) {
-    header #course-title {
-        font-size: 1.25rem;
+        align-items: center;
+        text-align: center;
     }
 }

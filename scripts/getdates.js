@@ -1,7 +1,7 @@
-// Dynamically set the current year in the footer
+// Dynamically populate the current year for the copyright
 const currentYear = new Date().getFullYear();
 document.getElementById("currentyear").textContent = currentYear;
 
-// Dynamically set the last modified date in the footer
-const lastModified = document.lastModified;
-document.getElementById("lastModified").textContent = "Last Modified: " + lastModified;
+// Dynamically populate the last modified date
+// Standard format: "Last Modification: MM/DD/YYYY HH:MM:SS"
+document.getElementById("lastModified").textContent = `Last Modification: ${document.lastModified}`;
