@@ -94,6 +94,13 @@ h1 {
     text-align: center;
 }
 
+.card h2 {
+    background-color: #1b4965;
+    color: white;
+    padding: 0.6rem;
+    text-align: center;
+}
+
 .about-me-content {
     display: flex;
     padding: 1.5rem;
