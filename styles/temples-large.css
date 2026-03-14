@@ -4,7 +4,7 @@
     }
 
     nav {
-        display: block; /* Always show nav on desktop */
+        display: flex; /* Always show nav on desktop */
         width: auto;
         background: none;
     }
