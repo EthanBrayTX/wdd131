@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album</title>
+    <meta name="description" content="A gallery of LDS temples for WDD 131.">
+    <meta name="author" content="Ethan Bray">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+    <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <button id="menu" title="Toggle Menu"></button>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Temple Gallery</h2>
+        <div class="grid-container">
+            <figure>
+                <img src="images/cape-town-south-africa-temple.jpg" alt="South Africa Cape Town Temple" loading="lazy">
+                <figcaption>Cape Town South Africa</figcaption>
+            </figure>
+            <figure>
+                <img src="images/dallas_texas_temple.jpeg" alt="Dallas Texas Temple" loading="lazy">
+                <figcaption>Dallas Texas</figcaption>
+            </figure>
+            <figure>
+                <img src="images/durban_south_africa_temple_exterior.jpeg" alt="Durban South Africa Temple" loading="lazy">
+                <figcaption>Durban South Africa</figcaption>
+            </figure>
+            <figure>
+                <img src="images/gilbert_arizona_temple.jpeg" alt="Gilbert Arizona Temple" loading="lazy">
+                <figcaption>Gilbert Arizona</figcaption>
+            </figure>
+            <figure>
+                <img src="images/johannesburg_south_africa_temple_lds.jpeg" alt="Johannesburg South Africa Temple" loading="lazy">
+                <figcaption>Johannesburg South Africa</figcaption>
+            </figure>
+            <figure>
+                <img src="images/jordan_river_temple_exterior_images.jpeg" alt="Jordan River Temple" loading="lazy">
+                <figcaption>Jordan River</figcaption>
+            </figure>
+            <figure>
+                <img src="images/mesa_temple.webp" alt="Mesa Arizona Temple" loading="lazy">
+                <figcaption>Mesa Arizona</figcaption>
+            </figure>
+            <figure>
+                <img src="images/seattle_washington_temple_exterior.jpeg" alt="Seattle Washington Temple" loading="lazy">
+                <figcaption>Seattle Washington</figcaption>
+            </figure>
+            <figure>
+                <img src="images/suva_fiji_temple_exterior.jpeg" alt="Suva Fiji Temple" loading="lazy">
+                <figcaption>Suva Fiji</figcaption>
+            </figure>
+        </div>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> 🌸 Ethan Bray 🌸 Texas</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

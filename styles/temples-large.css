@@ -1,0 +1,19 @@
+@media (min-width: 768px) {
+    #menu {
+        display: none; /* Hide hamburger on desktop */
+    }
+
+    nav {
+        display: block; /* Always show nav on desktop */
+        width: auto;
+        background: none;
+    }
+
+    .navigation {
+        display: flex; /* Horizontal menu */
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
