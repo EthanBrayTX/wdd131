@@ -1,68 +1,134 @@
+/* --- GLOBAL VARIABLES --- */
 :root {
-    --primary-color: #0077b6; /* Ocean blue for South Africa */
-    --accent-color: #fca311;
-    --text-color: #333;
-    --bg-color: #f0f8ff;
+    --primary-color: #003049;    /* Deep Marine Blue */
+    --accent-color: #fcbf49;     /* Golden Yellow */
+    --text-on-dark: #ffffff;
+    --body-bg: #f8f9fa;
+    --card-bg: rgba(255, 255, 255, 0.9);
 }
 
+/* --- BASE STYLES --- */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: var(--bg-color);
+    background-color: var(--body-bg);
     margin: 0;
+    line-height: 1.6;
 }
 
 header {
     text-align: center;
-    padding: 1rem;
-    background: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
+    padding: 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--text-on-dark);
+    border-bottom: 5px solid var(--accent-color);
+}
+
+/* --- HERO IMAGE --- */
+.hero {
+    width: 100%;
+    overflow: hidden;
 }
 
 .hero img {
     width: 100%;
     height: auto;
     display: block;
+    object-fit: cover;
+    object-position: center; 
 }
 
+/* --- CARDS (DATA & WEATHER) --- */
 section {
     background: white;
-    padding: 1rem;
-    margin: 1rem;
-    border: 1px solid #ccc;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    margin: 1rem auto;
+    width: 90%;
+    max-width: 400px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Specific requirement for Weather icon in large view */
-.weather-card h2::after {
-    content: " ☀️"; /* Emoticon for desktop */
+section h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0;
 }
 
-/* Mobile: Hide the desktop-only features */
-@media (max-width: 799px) {
-    .weather-card h2::after { content: ""; }
+/* MOBILE WEATHER ICON */
+.weather-icon {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    /* Visible by default on mobile */
+    display: block; 
 }
 
-/* Desktop View (Matching the wireframe) */
+section ul {
+    list-style: none;
+    padding: 0;
+}
+
+section ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+section ul li strong {
+    color: var(--primary-color);
+    width: 120px;
+    display: inline-block;
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--text-on-dark);
+    border-top: 5px solid var(--accent-color);
+}
+
+/* --- DESKTOP WIREFRAME LAYOUT (800px+) --- */
 @media (min-width: 800px) {
     main {
         position: relative;
+        min-height: 600px; 
     }
-    
+
+    .hero img {
+        min-height: 600px;
+        height: 100%;
+    }
+
+    /* HIDE THE MOBILE PNG ICON ON DESKTOP */
+    .weather-icon {
+        display: none;
+    }
+
     .data-card, .weather-card {
         position: absolute;
-        width: 250px;
-        background: rgba(255, 255, 255, 0.9);
+        width: 300px;
+        background: var(--card-bg);
+        border: 2px solid var(--accent-color);
+        margin: 0;
+        z-index: 10;
     }
 
-    .data-card { top: 50px; left: 50px; }
-    .weather-card { bottom: 50px; right: 50px; }
-    
-    .weather-icon-mobile { display: none; }
-}
+    .data-card { 
+        top: 30px; 
+        left: 30px; 
+    }
 
-footer {
-    text-align: center;
-    padding: 1rem;
-    background: var(--primary-color);
-    color: white;
+    .weather-card { 
+        bottom: 30px; 
+        right: 30px; 
+    }
+
+    /* SHOW THE EMOTICON ICON INSTEAD ON DESKTOP */
+    .weather-card h2::after {
+        content: " ⛅";
+    }
 }

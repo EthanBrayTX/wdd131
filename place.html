@@ -6,6 +6,9 @@
     <title>Camps Bay, South Africa - WDD 131</title>
     <meta name="description" content="A page showcasing data and weather for Camps Bay, South Africa.">
     <meta name="author" content="Ethan Bray">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/place.css">
     <script src="scripts/place.js" defer></script>
 </head>
@@ -17,7 +20,7 @@
         <div class="hero">
             <picture>
                 <source srcset="images/camps_bay_large.webp" media="(min-width: 800px)">
-                <img src="images/camps_bay_small.webp" alt="Scenic view of Camps Bay beach and mountains" loading="lazy">
+                <img src="images/camps_bay_small.webp" alt="Scenic view of Camps Bay beach" loading="lazy">
             </picture>
         </div>
 
@@ -33,7 +36,7 @@
         </section>
 
         <section class="weather-card">
-            <h2>Weather <img src="images/weather_icon.png" alt="Weather icon" class="weather-icon-mobile"></h2>
+            <h2>Weather <img src="images/weather_icon.png" alt="Sunny icon" class="weather-icon"></h2>
             <ul>
                 <li><strong>Temperature:</strong> <span id="temp">8</span>°C</li>
                 <li><strong>Conditions:</strong> Sunny</li>
