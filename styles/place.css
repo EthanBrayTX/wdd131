@@ -1,0 +1,68 @@
+:root {
+    --primary-color: #0077b6; /* Ocean blue for South Africa */
+    --accent-color: #fca311;
+    --text-color: #333;
+    --bg-color: #f0f8ff;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    padding: 1rem;
+    background: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+section {
+    background: white;
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Specific requirement for Weather icon in large view */
+.weather-card h2::after {
+    content: " ☀️"; /* Emoticon for desktop */
+}
+
+/* Mobile: Hide the desktop-only features */
+@media (max-width: 799px) {
+    .weather-card h2::after { content: ""; }
+}
+
+/* Desktop View (Matching the wireframe) */
+@media (min-width: 800px) {
+    main {
+        position: relative;
+    }
+    
+    .data-card, .weather-card {
+        position: absolute;
+        width: 250px;
+        background: rgba(255, 255, 255, 0.9);
+    }
+
+    .data-card { top: 50px; left: 50px; }
+    .weather-card { bottom: 50px; right: 50px; }
+    
+    .weather-icon-mobile { display: none; }
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: white;
+}

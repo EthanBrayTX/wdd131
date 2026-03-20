@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camps Bay, South Africa - WDD 131</title>
+    <meta name="description" content="A page showcasing data and weather for Camps Bay, South Africa.">
+    <meta name="author" content="Ethan Bray">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Camps Bay</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/camps_bay_large.webp" media="(min-width: 800px)">
+                <img src="images/camps_bay_small.webp" alt="Scenic view of Camps Bay beach and mountains" loading="lazy">
+            </picture>
+        </div>
+
+        <section class="data-card">
+            <h2>Data</h2>
+            <ul>
+                <li><strong>Area:</strong> 1.51 km²</li>
+                <li><strong>Population:</strong> 5,500</li>
+                <li><strong>Currency:</strong> South African Rand (ZAR)</li>
+                <li><strong>Languages:</strong> English, Afrikaans</li>
+                <li><strong>Time Zone:</strong> SAST (UTC+2)</li>
+            </ul>
+        </section>
+
+        <section class="weather-card">
+            <h2>Weather <img src="images/weather_icon.png" alt="Weather icon" class="weather-icon-mobile"></h2>
+            <ul>
+                <li><strong>Temperature:</strong> <span id="temp">8</span>°C</li>
+                <li><strong>Conditions:</strong> Sunny</li>
+                <li><strong>Wind Speed:</strong> <span id="wind">15</span> km/h</li>
+                <li><strong>Wind Chill:</strong> <span id="windchill"></span></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> 🌸 Ethan Bray 🌸 Texas</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
