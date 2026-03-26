@@ -1,0 +1,17 @@
+@media (min-width: 768px) {
+    #menu { display: none; }
+    nav { display: flex; width: auto; background: none; }
+    .navigation { display: flex; }
+    
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+
+    .temple-card img {
+        transition: transform 0.3s ease;
+    }
+
+    .temple-card img:hover {
+        transform: scale(1.02);
+    }
+}
