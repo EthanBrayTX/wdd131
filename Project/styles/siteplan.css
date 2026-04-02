@@ -1,6 +1,3 @@
-/* Import Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap');
-
 :root {
     --primary-color: #2D3047;
     --secondary-color: #E07A5F;
@@ -42,6 +39,22 @@ main {
     padding: 40px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     border-radius: 8px;
+}
+
+/* Color Palette Boxes for Site Plan */
+.primary-bg {
+    background-color: #2D3047;
+    color: white; /* Making text readable on dark background */
+}
+
+.secondary-bg {
+    background-color: #E07A5F;
+    color: white;
+}
+
+.accent-bg {
+    background-color: #F4F1DE;
+    color: #333;
 }
 
 .color-box {
