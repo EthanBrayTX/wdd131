@@ -105,17 +105,19 @@ legend {
 
 /* Checkbox specific layout */
 fieldset label {
-    display: flex;
+    display: inline-flex; /* Changed to handle sibling input better */
     align-items: center;
     font-weight: normal;
     margin-top: 0.8rem;
+    margin-right: 15px;
     cursor: pointer;
 }
 
 fieldset input[type="checkbox"] {
-    margin-right: 12px;
+    margin-right: 8px;
     width: 18px;
     height: 18px;
+    vertical-align: middle;
 }
 
 /* =========================================
@@ -135,20 +137,17 @@ fieldset input[type="checkbox"] {
     margin: 0;
     cursor: pointer;
     font-weight: normal;
-    position: relative;
 }
 
-/* The Radio Button (Hidden but clickable) */
+/* The Radio Button (Hidden but functional) */
 .rating input[type="radio"] {
     position: absolute;
     opacity: 0;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    z-index: 2;
+    width: 0;
+    height: 0;
 }
 
-/* The Star Icon (Empty by default) */
+/* The Star Icon (Empty by default via the label's pseudo-element) */
 .rating label::before {
     content: "\2606"; /* Unicode Star Outline */
     font-size: 2.5rem;
@@ -156,17 +155,11 @@ fieldset input[type="checkbox"] {
     transition: color 0.2s, transform 0.1s;
 }
 
-/* Logic: When internal radio is checked, turn THIS star gold */
-.rating label:has(input:checked)::before {
+/* Logic: When the hidden radio is checked, the NEXT label turns gold */
+.rating input[type="radio"]:checked + label::before {
     content: "\2605"; /* Unicode Filled Star */
     color: var(--accent-color);
     transform: scale(1.1);
-}
-
-/* Number display under the star */
-.rating span {
-    font-size: 0.85rem;
-    margin-top: -5px;
 }
 
 /* =========================================
@@ -216,6 +209,6 @@ input[type="submit"]:hover {
     }
 
     .rating label::before {
-        font-size: 2.2rem; /* Slightly smaller for mobile */
+        font-size: 2.2rem; 
     }
 }

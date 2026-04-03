@@ -24,11 +24,20 @@
             <fieldset>
                 <legend>Overall Rating</legend>
                 <div class="rating">
-                    <label><input type="radio" name="rating" value="1" required> 1</label>
-                    <label><input type="radio" name="rating" value="2"> 2</label>
-                    <label><input type="radio" name="rating" value="3"> 3</label>
-                    <label><input type="radio" name="rating" value="4"> 4</label>
-                    <label><input type="radio" name="rating" value="5"> 5</label>
+                    <input type="radio" id="star1" name="rating" value="1" required>
+                    <label for="star1">1</label>
+                    
+                    <input type="radio" id="star2" name="rating" value="2" required>
+                    <label for="star2">2</label>
+                    
+                    <input type="radio" id="star3" name="rating" value="3" required>
+                    <label for="star3">3</label>
+                    
+                    <input type="radio" id="star4" name="rating" value="4" required>
+                    <label for="star4">4</label>
+                    
+                    <input type="radio" id="star5" name="rating" value="5" required>
+                    <label for="star5">5</label>
                 </div>
             </fieldset>
 
@@ -37,10 +46,17 @@
 
             <fieldset>
                 <legend>Which features did you find useful?</legend>
-                <label><input type="checkbox" name="features" value="durability"> Durability</label>
-                <label><input type="checkbox" name="features" value="ease-of-use"> Ease of Use</label>
-                <label><input type="checkbox" name="features" value="performance"> Performance</label>
-                <label><input type="checkbox" name="features" value="design"> Design</label>
+                <input type="checkbox" id="feat-durability" name="features" value="durability">
+                <label for="feat-durability">Durability</label>
+
+                <input type="checkbox" id="feat-ease" name="features" value="ease-of-use">
+                <label for="feat-ease">Ease of Use</label>
+
+                <input type="checkbox" id="feat-performance" name="features" value="performance">
+                <label for="feat-performance">Performance</label>
+
+                <input type="checkbox" id="feat-design" name="features" value="design">
+                <label for="feat-design">Design</label>
             </fieldset>
 
             <label for="review">Written Review (Optional)</label>
