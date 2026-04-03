@@ -1,0 +1,221 @@
+/* =========================================
+   1. CSS Reset & Variables
+   ========================================= */
+:root {
+    --primary-color: #3f51b5;
+    --accent-color: #ffca28; /* Gold for stars */
+    --text-color: #333;
+    --bg-color: #f4f4f9;
+    --white: #ffffff;
+    --border-color: #ccc;
+    --footer-bg: #2c3e50;
+    --footer-text: #ecf0f1;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* =========================================
+   2. Header & Footer
+   ========================================= */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 1rem;
+    text-align: center;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   3. Main Layout
+   ========================================= */
+main {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+    width: 100%;
+}
+
+form {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* =========================================
+   4. Form Elements (Alignment & Proximity)
+   ========================================= */
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+fieldset {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 1rem;
+    margin-top: 1.5rem;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 10px;
+    color: var(--primary-color);
+}
+
+/* Checkbox specific layout */
+fieldset label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    margin-top: 0.8rem;
+    cursor: pointer;
+}
+
+fieldset input[type="checkbox"] {
+    margin-right: 12px;
+    width: 18px;
+    height: 18px;
+}
+
+/* =========================================
+   5. Ascending Star Rating (1 to 5)
+   ========================================= */
+.rating {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.rating label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    cursor: pointer;
+    font-weight: normal;
+    position: relative;
+}
+
+/* The Radio Button (Hidden but clickable) */
+.rating input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* The Star Icon (Empty by default) */
+.rating label::before {
+    content: "\2606"; /* Unicode Star Outline */
+    font-size: 2.5rem;
+    color: #bbb;
+    transition: color 0.2s, transform 0.1s;
+}
+
+/* Logic: When internal radio is checked, turn THIS star gold */
+.rating label:has(input:checked)::before {
+    content: "\2605"; /* Unicode Filled Star */
+    color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+/* Number display under the star */
+.rating span {
+    font-size: 0.85rem;
+    margin-top: -5px;
+}
+
+/* =========================================
+   6. Submission Button
+   ========================================= */
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 2.5rem;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #303f9f;
+}
+
+/* Confirmation Page Specific Link */
+.back-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/* =========================================
+   7. Mobile Responsiveness
+   ========================================= */
+@media screen and (max-width: 600px) {
+    main {
+        margin: 1rem auto;
+        padding: 0 10px;
+    }
+
+    form {
+        padding: 1.2rem;
+    }
+
+    .rating label::before {
+        font-size: 2.2rem; /* Slightly smaller for mobile */
+    }
+}
