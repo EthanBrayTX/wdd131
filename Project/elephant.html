@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Big Five | African Elephant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.webp" alt="Big Five Hub Logo" width="50">
+            <h1>The Big Five Hub</h1>
+        </div>
+        <nav>
+            <button id="menu" title="Menu"></button>
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lion.html">Lion</a></li>
+                <li><a href="leopard.html">Leopard</a></li>
+                <li><a href="rhino.html">Rhino</a></li>
+                <li><a href="elephant.html" class="active">Elephant</a></li>
+                <li><a href="buffalo.html">Buffalo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="detail-page">
+        <section class="animal-hero">
+            <img src="images/elephant-large.jpg" alt="African Elephant Herd" loading="lazy">
+            <h1>The African Elephant</h1>
+        </section>
+
+        <div class="info-grid">
+            <section class="details">
+                <h2>Diet & Habitat</h2>
+                <p><strong>Diet:</strong> Herbivore. They consume up to 300 pounds of roots, grasses, fruit, and bark in a single day.</p>
+                <p><strong>Habitat:</strong> They are found across most of Africa, from savannas and forests to deserts.</p>
+            </section>
+
+            <section class="facts">
+                <h2>Fun Facts</h2>
+                <ul>
+                    <li>Elephants are highly intelligent and show complex emotions like grief and playfulness.</li>
+                    <li>An elephant's trunk has over <strong>40,000 muscles</strong>—for comparison, humans have about 600 total.</li>
+                    <li>They communicate over long distances using low-frequency sounds humans can't hear.</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Ethan Bray | Texas</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+        <p><a href="references.html">References</a></p>
+    </footer>
+</body>
+</html>

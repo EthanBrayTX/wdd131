@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Big Five Hub | Home</title>
+    <meta name="description" content="Learn about the African Big Five: Lion, Leopard, Rhino, Elephant, and Buffalo.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.webp" alt="Big Five Hub Logo" width="50">
+            <h1>The Big Five Hub</h1>
+        </div>
+        <nav>
+            <button id="menu" title="Menu"></button>
+            <ul id="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="lion.html">Lion</a></li>
+                <li><a href="leopard.html">Leopard</a></li>
+                <li><a href="rhino.html">Rhino</a></li>
+                <li><a href="elephant.html">Elephant</a></li>
+                <li><a href="buffalo.html">Buffalo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="images/hero-savanna.jpg" alt="African Savanna" loading="lazy">
+            <div class="hero-text">
+                <h2>Explore the Savanna</h2>
+                <p id="welcome-message"></p> </div>
+        </section>
+
+        <section class="origin">
+            <h2>The Origin of the Big Five</h2>
+            <p>The term "Big Five" was originally coined by big-game hunters to describe the five most dangerous animals to hunt on foot in Africa. Today, it stands as a symbol of conservation and the majesty of South African wildlife.</p>
+        </section>
+
+        <section class="animal-grid">
+            <h2>Meet the Five</h2>
+            <div id="animal-cards-container"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Ethan Bray | Texas</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+        <p><a href="references.html">References</a></p>
+    </footer>
+</body>
+</html>

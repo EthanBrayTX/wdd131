@@ -1,0 +1,149 @@
+:root {
+    --primary: #2D3047;
+    --secondary: #E07A5F;
+    --accent: #F4F1DE;
+    --white: #ffffff;
+    --text: #333;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: var(--accent);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#menu { display: none; font-size: 2rem; background: none; border: none; color: white; cursor: pointer; }
+
+/* Hero & Grid */
+.hero img { width: 100%; height: 60vh; object-fit: cover; display: block; }
+.hero-text { background: rgba(45, 48, 71, 0.8); color: white; padding: 2rem; text-align: center; }
+
+.origin {
+    max-width: 800px;  /* Keeps the lines of text from getting too long to read */
+    margin: 2rem auto; /* Centers the section and adds space top/bottom */
+    padding: 0 20px;   /* Adds the specific "side padding" you're missing */
+    text-align: center;
+}
+
+.origin h2 {
+    margin-top: 0;     /* Cleans up spacing at the top of the header */
+}
+
+.animal-grid h2 {
+    text-align: center;
+    margin-bottom: 2rem; /* Adds some space between the title and the cards */
+    font-size: 2.5rem;   /* Optional: makes it stand out more */
+}
+
+#animal-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: var(--white);
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--secondary);
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+    margin: 1rem;
+    border-radius: 5px;
+}
+
+/* Mobile Nav */
+@media (max-width: 768px) {
+    #menu { display: block; }
+    #menu::before { content: "☰"; }
+    #menu.open::before { content: "✕"; }
+    nav ul { display: none; flex-direction: column; width: 100%; }
+    nav ul.show { display: flex; }
+}
+
+footer { background: var(--primary); color: white; text-align: center; padding: 2rem; margin-top: 50px; }
+
+
+/* --- Detail Page Styles --- */
+.animal-hero {
+    position: relative;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.animal-hero img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.details, .facts {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.interaction {
+    text-align: center;
+    margin: 3rem 0;
+}

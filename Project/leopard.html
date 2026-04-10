@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Big Five | African Leopard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.webp" alt="Big Five Hub Logo" width="50">
+            <h1>The Big Five Hub</h1>
+        </div>
+        <nav>
+            <button id="menu" title="Menu"></button>
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lion.html">Lion</a></li>
+                <li><a href="leopard.html" class="active">Leopard</a></li>
+                <li><a href="rhino.html">Rhino</a></li>
+                <li><a href="elephant.html">Elephant</a></li>
+                <li><a href="buffalo.html">Buffalo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="detail-page">
+        <section class="animal-hero">
+            <img src="images/leopard-large.jpg" alt="Leopard resting in a tree" loading="lazy">
+            <h1>The African Leopard</h1>
+        </section>
+
+        <div class="info-grid">
+            <section class="details">
+                <h2>Diet & Habitat</h2>
+                <p><strong>Diet:</strong> Carnivore. Leopards are opportunistic hunters with the broadest diet of all big cats, eating everything from beetles to antelope.</p>
+                <p><strong>Habitat:</strong> Highly adaptable, they live in mountains, forests, and even deserts, but prefer areas with trees for stalking and safety.</p>
+            </section>
+
+            <section class="facts">
+                <h2>Fun Facts</h2>
+                <ul>
+                    <li>Leopards are incredibly strong and can carry prey twice their weight high up into trees.</li>
+                    <li>Unlike lions, leopards are <strong>solitary</strong> animals that prefer to live and hunt alone.</li>
+                    <li>They are excellent swimmers and are one of the few big cats that enjoy the water.</li>
+                </ul>
+            </section>
+        </div>
+
+        <section class="interaction">
+            <button id="fav-leopard" class="btn">❤️ Mark as Favorite Animal</button>
+            <p id="fav-leopard-message"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Ethan Bray | Texas</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+        <p><a href="references.html">References</a></p>
+    </footer>
+</body>
+</html>
